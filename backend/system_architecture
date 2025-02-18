@@ -1,0 +1,13 @@
+digraph "System Architecture" {
+	Client [label="Client (User)"]
+	AuthAPI [label="Flask JWT Auth API"]
+	DB [label="Database (SQLite/PostgreSQL)"]
+	Redis [label="Redis (Token Blacklist)"]
+	Client -> AuthAPI [label="Login / Register"]
+	AuthAPI -> DB [label="Store User"]
+	Client -> AuthAPI [label="Get Access Token"]
+	AuthAPI -> Redis [label="Blacklist Token on Logout"]
+	Client -> AuthAPI [label="Refresh Token"]
+	AuthAPI -> DB [label="Verify User"]
+	Client -> AuthAPI [label="Access Protected Routes"]
+}
