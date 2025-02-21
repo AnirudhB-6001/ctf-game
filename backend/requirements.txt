@@ -2,3 +2,11 @@ gunicorn
 flask
 flask_cors
 flask_jwt_extended
+gunicorn
+flask
+flask_cors
+flask_jwt_extended
+gunicorn
+flask
+flask_cors
+flask_jwt_extended
