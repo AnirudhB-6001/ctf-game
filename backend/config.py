@@ -1,4 +1,10 @@
 import os
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 SQLALCHEMY_DATABASE_URI = f"sqlite:///{os.path.join(BASE_DIR, 'ctf_game.db')}"
